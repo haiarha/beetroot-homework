@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  background: #fdde7e;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 40px 20px 30px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-basis: 360px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, .1);
+  transition: all .25s;
+}
+
+.card:hover {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, .3);
+}
+
+.card * {
+  transition: all .25s;
+}
+
+.card--last {
+  order: 1;
+}
+
+.card__price {
+  color: #1f995a;
+  font-weight: 600;
+  font-size: 70px;
+  margin-bottom: 15px;
+}
+
+.card:hover .card__price {
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+.card__img {
+  margin-bottom: 30px;
+}
+
+.card:hover .card__img {
+  margin-bottom: 40px;
+}
+
+.card__title {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.card__description {
+  font-size: 22px;
+  font-weight: 300;
+  opacity: .6;
+}
+
+.coffee-cup {
+  height: 135px;
+  position: relative;
+}
+
+.coffee-cup__smoke {
+  width: 49px;
+  height: 46px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -25px;
+}
+
+.coffee-cup__cup {
+  position: absolute;
+  top: 55px;
+  width: 135px;
+  height: 77px;
+  left: 50%;
+  margin-left: -58px;
+}
+
+.coffee-cup__bean {
+  position: absolute;
+  top: 75px;
+  width: 36px;
+  height: 44px;
+  left: 50%;
+  margin-left: -18px;
+}
