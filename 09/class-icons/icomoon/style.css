@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?xnka6c');
+  src:  url('fonts/icomoon.eot?xnka6c#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?xnka6c') format('truetype'),
+    url('fonts/icomoon.woff?xnka6c') format('woff'),
+    url('fonts/icomoon.svg?xnka6c#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-android:before {
+  content: "\e900";
+  color: #3ddc84;
+}
+.icon-angular:before {
+  content: "\e901";
+  color: #dd0031;
+}
+.icon-apple:before {
+  content: "\e902";
+  color: #999;
+}
+.icon-behance:before {
+  content: "\e903";
+  color: #1769ff;
+}
+.icon-bitbucket:before {
+  content: "\e904";
+  color: #0052cc;
+}
+.icon-googledrive:before {
+  content: "\e905";
+  color: #4285f4;
+}
+.icon-groupon:before {
+  content: "\e906";
+  color: #53a318;
+}
+.icon-instagram:before {
+  content: "\e907";
+  color: #e4405f;
+}
+.icon-odnoklassniki:before {
+  content: "\e908";
+  color: #f4731c;
+}
+.icon-steam:before {
+  content: "\e909";
+}
+.icon-viber:before {
+  content: "\e90a";
+  color: #665cac;
+}
+.icon-visualstudio:before {
+  content: "\e90b";
+  color: #5c2d91;
+}
+.icon-vlcmediaplayer:before {
+  content: "\e90c";
+  color: #f80;
+}
+.icon-skype-custom:before {
+  content: "\e90d";
+}
+.icon-chrome:before {
+  content: "\ead9";
+}
+.icon-firefox:before {
+  content: "\eada";
+}
+.icon-IE:before {
+  content: "\eadb";
+}
+.icon-edge:before {
+  content: "\eadc";
+}
+.icon-safari:before {
+  content: "\eadd";
+}
+.icon-opera:before {
+  content: "\eade";
+}

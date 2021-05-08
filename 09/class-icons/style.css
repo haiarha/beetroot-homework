@@ -1,0 +1,21 @@
+.header-link {
+  color: #f8f9fa;
+  text-decoration: none;
+}
+
+.header-link:hover {
+  text-decoration: none;
+}
+
+.header-link:hover * {
+  color: #f8f9fa;
+  text-decoration: underline;
+}
+
+.header-link:hover .material-icons {
+  text-decoration: none;
+}
+
+.icon-odnoklassniki:before {
+  color: purple;
+}
