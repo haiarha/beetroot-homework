@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container"></div>
+  </header>
+
+  <main>
+    <div class="container transform-perspective">
+      <div class="row">
+
+        <div class="col-3">
+          <div class="transform transform-scale">
+            transform: scale(2);
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="transform transform-scale-negative">
+            transform: scale(1, -1);
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="transform-parent">
+            <div class="transform transform-scale-child">
+              Hover parent
+              <br>
+              transform: scale(1, -1);
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="transform transform-skew">
+            transform: skewX(25deg);
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="transform transform-rotate">
+            transform: rotate(10deg);
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="transform transform-translate">
+            transform: translate3d(0, 0, 100px);
+            <br>
+            transform: translateZ(100px);
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="transform transform-translate-x">
+            transform: translateX(100px);
+            <br>
+            transform: translate(100px, 0);
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="transform-parent">
+            <div class="transform transform-translate-x-child">
+  
+              Hover parent
+              <br>
+              transform: translateX(100px);
+              <br>
+              transform: translate(100px, 0);
+            </div>
+          </div>
+        </div>
+
+        <div class="col-3">
+          <div class="transform transform-rotateY transform-scale">
+            transform: rotateY(2turn);
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
