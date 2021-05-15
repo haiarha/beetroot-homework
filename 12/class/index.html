@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>forms</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="../.." style="position: fixed; bottom: 20px; left: 10px; z-index: 999">НАЗАД</a>
+  
+  <main class="main">
+    <div class="container">
+      <form class="form" action="#" method="GET">
+        
+        <label class="input-block">
+          <span class="input-block__name">Имя</span>
+          
+          <input 
+            class="input-block__input" 
+            type="text"
+            name="name"
+            required
+            min="2"
+            pattern="[А-ЯЁ][а-яё]{1,15}"
+          >
+
+          <span class="input-block__hint">Имя на русском с большой буквы, не длиннее 15 символов</span>
+        </label>
+
+        <label class="input-block">
+          <span class="input-block__name">Возраст (не младше 18)</span>
+
+          <input 
+            class="input-block__input" 
+            type="number"
+            name="age"
+            autocomplete="off"
+            required
+            min="18"
+            max="100"
+            step="2"
+          >
+
+          <span class="input-block__hint">Возраст 18-100, только четный</span>
+        </label>
+        
+        <label class="input-block">
+          <span class="input-block__name">Город</span>
+
+          <select class="input-block__input" required name="city">
+            <option></option>
+            <option>Киев</option>
+            <option>Днепр</option>
+            <option>Львов</option>
+            <option>Черновцы</option>
+          </select>
+
+          <span class="input-block__hint">Город обязателен</span>
+        </label>
+
+        <label class="input-block">
+          <span class="input-block__name">Дата рождения</span>
+
+          <input 
+            class="input-block__input" 
+            type="date"
+            name="date"
+            autocomplete="off"
+            required
+            min="1921-05-15"
+            max="2002-05-15"
+          >
+
+          <span class="input-block__hint">Обязательное поле</span>
+        </label>
+
+        <label class="input-block">
+          <span class="input-block__name">Время рождения</span>
+
+          <input 
+            class="input-block__input" 
+            type="time"
+            name="time"
+            autocomplete="off"
+            required
+            min="09:00"
+            max="18:00"
+          >
+
+          <span class="input-block__hint">Обязательное поле</span>
+        </label>
+
+        <label class="input-block">
+          <span class="input-block__name">Любимый цвет</span>
+
+          <input
+            type="color"
+            name="color"
+          >
+        </label>
+
+        <label class="input-block">
+          <span class="input-block__name">О себе</span>
+
+          <textarea 
+            class="input-block__textarea" 
+            name="about"
+            minlength="100"
+            required
+          ></textarea>
+
+          <span class="input-block__hint">Не меньше 100 символов</span>
+        </label>
+
+        <label class="input-block">
+          <span class="input-block__name">Либеральность</span>
+
+          <input
+            class="input-block__range" 
+            type="range"
+            name="liberality"
+            min="0"
+            step="20"
+            max="100"
+          >
+        </label>
+
+        <button class="btn btn--primary" type="submit">Отправить</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
