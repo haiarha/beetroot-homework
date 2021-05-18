@@ -1,0 +1,60 @@
+/* Пример структуры CSS лендинга */
+
+body {
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.interesting-border {
+  color: white;
+  text-align: center;
+  border: 2px solid white;
+  border-top: none;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px 30px;
+}
+
+.interesting-border--dark {
+  color: grey;
+  border-color: grey;
+}
+
+.interesting-border::before, .interesting-border::after {
+  content: "";
+  width: calc(50% - 210px);
+  border-top: 2px solid;
+  border-color: inherit;
+  position: absolute;
+  top: 0;
+}
+
+.interesting-border::before {
+  left: -2px;
+}
+
+.interesting-border::after {
+  right: -2px;
+}
+
+.interesting-border__title {
+  margin-top: -25px;
+}
+
+.hero-section {
+  background: lightblue;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.hero-about {
+  background: white;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
