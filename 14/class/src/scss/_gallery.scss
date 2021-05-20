@@ -21,11 +21,11 @@
     width: calc(50% - #{$size-gutter*2});
 
     &--small {
-      width: calc(33.3333% - #{$size-gutter*2});
+      width: calc(33.3333333% - #{$size-gutter*2});
     }
 
     &--large {
-      width: calc(#{100/3*2%} - #{$size-gutter*2});
+      width: calc(66.6666666% - #{$size-gutter*2});
     }
   }
 }

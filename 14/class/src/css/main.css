@@ -36,10 +36,10 @@ body {
   width: calc(50% - 30px);
 }
 .gallery__item--small {
-  width: calc(33.3333% - 30px);
+  width: calc(33.3333333% - 30px);
 }
 .gallery__item--large {
-  width: calc(66.6666666667% - 30px);
+  width: calc(66.6666666% - 30px);
 }
 
 /*# sourceMappingURL=main.css.map */
