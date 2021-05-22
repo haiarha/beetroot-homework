@@ -1,0 +1,32 @@
+.gallery {
+  min-width: $size-content-width + $size-gutter*2;
+  background-color: yellow;
+  padding: 150px 0;
+
+  &__heading {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -$size-gutter;
+  }
+
+  &__item {
+    background-color: red;
+    min-height: 400px;
+    margin: $size-gutter;
+    width: calc(50% - #{$size-gutter*2});
+
+    &--small {
+      width: calc(33.3333333% - #{$size-gutter*2});
+    }
+
+    &--large {
+      width: calc(66.6666666% - #{$size-gutter*2});
+    }
+  }
+}

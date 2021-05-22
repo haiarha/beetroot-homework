@@ -1,0 +1,6 @@
+.container {
+  width: $size-content-width + $size-gutter*2;
+  margin: 0 auto;
+  padding-left: $size-gutter;
+  padding-right: $size-gutter;
+}

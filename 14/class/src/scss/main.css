@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1198px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.gallery {
+  background-color: yellow;
+  padding: 150px 0;
+}
+
+.gallery__heading {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gallery__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -15px;
+}
+
+.gallery__item {
+  min-height: 550px;
+  margin: 15px;
+  width: calc(50% - 30px);
+}
+
+.gallery__item--small {
+  width: calc(33.3333333% - 30px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+}
+
+@media screen and (max-width: 768px) and (min-width: 526px) {
+  .gallery__item--small {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.gallery__item--large {
+  width: calc(66.6666666% - 30px);
+}
+
+@media screen and (max-width: 768px) {
+  .gallery__item {
+    width: 100%;
+  }
+}
+
+.gallery__subitem {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 15px 0;
+}
+
+.gallery__subitem:first-child {
+  margin-top: 0;
+}
+
+.gallery__subitem:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) and (min-width: 526px) {
+  .gallery__subitem {
+    margin: 0 15px;
+  }
+  .gallery__subitem:first-child {
+    margin-left: 0;
+  }
+  .gallery__subitem:last-child {
+    margin-right: 0;
+  }
+}
+
+.bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg__1 {
+  background-image: url("../img/bg_hover_2.jpg");
+}
+
+.bg__2 {
+  background-image: url("../img/bg_21.jpg");
+}
+
+.bg__3 {
+  background-image: url("../img/bg_20.jpg");
+}
+
+.bg__4 {
+  background-image: url("../img/bg_19.jpg");
+}
+
+.bg__5 {
+  background-image: url("../img/bg_18.jpg");
+}
+
+.box-shadow {
+  -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5);
+  -webkit-transition: -webkit-box-shadow .2s;
+  transition: -webkit-box-shadow .2s;
+  transition: box-shadow .2s;
+  transition: box-shadow .2s, -webkit-box-shadow .2s;
+}
+
+.box-shadow:hover {
+  -webkit-box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);
+}
+/*# sourceMappingURL=main.css.map */
