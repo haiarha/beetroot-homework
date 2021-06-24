@@ -19,12 +19,15 @@ class Animal {
     this.age = _age;
   }
 
+  static test = 1
+
   running(steps) {
     for (let i = 1; i <= steps; i++) {
       console.log("Бигим " + i);
     }
   }
 }
+
 
 class Dog extends Animal {
   bark(times) {

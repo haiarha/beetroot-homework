@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <a href="../.." style="position: fixed; bottom: 20px; left: 10px; z-index: 999">НАЗАД</a>
+
+  <!-- <h1>Осталось времени:</h1>
+
+  <div id="time"></div>
+
+  <script src="timer.js"></script> -->
+
+  <style>
+    #clock {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: rgb(225, 219, 211);
+      border: 2px solid #a57a43;
+      margin: 0 auto;
+    }
+
+    #arrowHours, #arrowMinutes, #arrowSeconds {
+      height: 100%;
+      width: 0;
+      position: absolute;
+      top: 0;
+      left: 50%;
+    }
+
+    #arrowHours::before, #arrowMinutes::before, #arrowSeconds::before {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 50%;
+      left: -1px;
+      top: 0;
+      background-color: red;
+      z-index: 1;
+    }
+
+    #arrowHours::before {
+      background-color: grey;
+      width: 4px;
+      left: -2px;
+      height: 30%;
+      top: 20%;
+    }
+
+    #arrowMinutes::before {
+      background-color: grey;
+    }
+  </style>
+
+  <div id="clock">
+    <div id="arrowHours"></div>
+    <div id="arrowMinutes"></div>
+    <div id="arrowSeconds"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
