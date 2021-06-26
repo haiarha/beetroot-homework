@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button ripple example</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        /* background: red; */
+      }
+
+      .btn {
+        background: blueviolet;
+        color: white;
+        border: none;
+        outline: none;
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 15px 25px;
+        cursor: pointer;
+
+        position: relative;
+        overflow: hidden;
+      }
+      
+
+      .bubble {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin: -15px;
+        background: currentColor;
+        pointer-events: none;
+        
+        opacity: 0;
+        animation: scale 1s;
+      }
+
+      @keyframes scale {
+        /* 0% { */
+        from {
+          opacity: 1;
+          transform: scale(0);
+        }
+
+        /* 100% { */
+        to {
+          opacity: 0;
+          transform: scale(10);
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <div style="margin: 0 auto; width: 900px;">
+
+      <h1>
+        Пример Эффекта Ripple
+
+      </h1>
+
+      <hr>
+      <button class="btn">кнопка 1</button>
+
+      <hr>
+      <button class="btn">кнопка 3</button>
+
+      <hr>
+      <button class="btn">кнопка 2</button>
+
+
+      <hr>
+      <button class="btn">Здоровенная и длинная кнопка</button>
+
+
+    </div>
+
+    <script>
+      window.addEventListener("click", (event) => {
+
+        if (event.target.className.includes('btn')) {
+          ripple(event.target, event.offsetX, event.offsetY);
+        }
+      });
+
+      function ripple(target, x, y, background) {
+        const el = document.createElement("div");
+
+        el.className = "bubble";
+        el.style.left = x + "px";
+        el.style.top = y + "px";
+
+        if (background) {
+          el.style.background = background
+        }
+
+        target.appendChild(el);
+
+        setTimeout(() => {
+          el.remove();
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>
