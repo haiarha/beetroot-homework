@@ -43,7 +43,7 @@ function getFavorites() {
 
 function fetchMovies(text, type, page) {
   return fetch(
-    `http://www.omdbapi.com/?apikey=8b912071&s=${text}&type=${type}&page=${page}`
+    `//www.omdbapi.com/?apikey=8b912071&s=${text}&type=${type}&page=${page}`
   ).then((response) => {
     return response.json();
   });
