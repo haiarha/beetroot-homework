@@ -86,3 +86,23 @@ body {
   color: white;
   cursor: pointer;
 }
+
+.loader {
+  display: none;
+  width: 100px;
+  height: 100px;
+  border: 8px solid rgba(255, 255, 255, 0.2);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -42,11 +42,21 @@ function getFavorites() {
 }
 
 function fetchMovies(text, type, page) {
+  $(".loader").show();
+
   return fetch(
     `//www.omdbapi.com/?apikey=8b912071&s=${text}&type=${type}&page=${page}`
-  ).then((response) => {
-    return response.json();
-  });
+  )
+    .then((response) => {
+      $(".loader").hide();
+
+      return response.json();
+    })
+    .catch((error) => {
+      console.log("Ошибка загрузки");
+
+      $(".loader").hide();
+    });
 }
 
 function updateFetchMovies(page = 1) {
