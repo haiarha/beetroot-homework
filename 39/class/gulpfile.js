@@ -27,4 +27,6 @@ exports.watch = function () {
   gulp.watch("./sass/**/*", buildStyles);
 };
 
+// То же, что и 
+// module.exports.default
 exports.default = gulp.series(cleanStyles, buildStyles);
