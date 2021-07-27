@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+  <a href="../.." style="position: fixed; bottom: 20px; left: 10px; z-index: 999">НАЗАД</a>
+
+  <div id="app">
+    <div v-bind:style="{ background: output }" id="test">{{ output }}</div>
+
+    <input type="text" v-model="input" />
+
+    <button @click="onClick">{{ btnText }}</button>
+  </div>
+
+  <script>
+    const App = {
+      data() {
+        return {
+          btnText: 'Подтвердить',
+
+          input: '',
+          output: ''
+        }
+      },
+
+      methods: {
+        onClick() {
+          this.output = this.input
+
+          this.input = ''
+
+          console.log('onClick: Я запущен!!! Вот что в this: ', this)
+        }
+      }
+    }
+
+    Vue.createApp(App)
+      .mount('#app')
+  </script>
+</body>
+</html>
