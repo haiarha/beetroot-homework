@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <a href="../.." style="position: fixed; bottom: 20px; left: 10px; z-index: 999">НАЗАД</a>
+  
+    <div class="container">
+      <div id="app"></div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+      // Реализуйте форму, в которой пользователь может
+      // в текстовое поле вводить цвет.
+      // И при нажатии на кнопку подтверждения - отображается
+      // - на странице – данный текст данным цветом.
+      // Список цветов создайте с помощью массива
+
+      const App = {
+        template: /*html*/ `
+          <input type="text" v-model="inputText" />
+          <button @click="onClick">Подтвердить</button>
+
+          <p>Список:</p>
+          <ul>
+            <li
+              v-for="(col, index) in colors"
+            >
+              <input
+                v-model="colors[index]"
+                type="text"
+                v-bind:style="{
+                  color: col
+                }"
+              />
+
+              <button 
+                v-on:click="onClickDelete(index)"
+              >X</button>
+            </li>
+          </ul>
+        `,
+
+        data() {
+          return {
+            inputText: "",
+
+            colors: ["blue"],
+          };
+        },
+
+        methods: {
+          onClick() {
+            console.log("Введено вот что:", this.inputText);
+
+            this.colors.push(this.inputText);
+
+            this.inputText = "";
+          },
+
+          onClickDelete(i) {
+            console.log("Удален цвет:", i);
+
+            this.colors.splice(i, 1);
+          },
+        },
+      };
+
+      Vue.createApp(App).mount("#app");
+    </script>
+  </body>
+</html>
